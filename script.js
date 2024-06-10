@@ -33,9 +33,23 @@ function updateProgressBar(id, percentage) {
   
   // Example usage: Update the progress bars to different values after 1 second
   setTimeout(function() {
-    updateProgressBar('progress-bar1', 70);
-    updateProgressBar('progress-bar2', 50);
-    updateProgressBar('progress-bar3', 90);
+    updateProgressBar('progress-bar1', 80);
+    updateProgressBar('progress-bar2', 70);
+    updateProgressBar('progress-bar3', 70);
+    updateProgressBar('progress-bar4', 90);
+    updateProgressBar('progress-bar5', 60);
+    updateProgressBar('progress-bar6', 100);
+    
   }, 1000);
 
+  function sendMail(){
+    let parms = {
+        name : document.getElementById("name").value,
+        email : document.getElementById("email").value,
+        number : document.getElementById("number").value,
+        subject : document.getElementById("subject").value,
+        message : document.getElementById("message").value,
+    }
+    emailjs.send("service_dv7ala3","template_a0gw3z8",parms).then(alert("Email Sent !!!"))
+  }
  

@@ -85,7 +85,9 @@ section{
     flex-direction: column;
     align-items: baseline;
     text-align: left;
-    text-align: justify;
+    /*text-align: justify;*/
+    word-spacing: normal;
+    text-justify: inter-word;
     justify-content: center;
     margin-top: 3rem;
 }
@@ -166,7 +168,7 @@ span{
 }
 .btn:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 50px var(--main-color);
+    box-shadow: 0 0 40px var(--main-color);
 }
 .btn-group{
     display: flex;
@@ -348,7 +350,8 @@ font-size: small;
 .timeline-content p{
     color: white;
     font-size: 16px;
-    text-align: justify;
+    /*text-align: justify;*/
+    text-justify: inter-word;
     font-weight: 300;
     line-height: 22px;
 }
@@ -403,13 +406,13 @@ font-size: small;
 .service-info h4{
     font-size: 3rem;
     font-weight: 800;
-    line-height: 2;
+    line-height: 1.2;
 }
 .service-info p{
     font-size: 1.6rem;
     font-weight: 600;
     max-height: 100px;
-    text-align: justify;
+   /*text-align: justify;*/ 
     line-height: 1.7;
     margin: auto;
 }
@@ -430,7 +433,7 @@ font-size: small;
     width: 14rem;
     border-radius: 50%;
     border: 3px solid var(--main-color);
-    box-shadow: 0 0 25px var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
 }
 .wrapper{
     display: grid;
@@ -458,7 +461,7 @@ font-size: small;
 .testimonial-item:hover{
     border: 3px solid var(--main-color);
     transform: translateY(-10px)scale(1.03);
-    box-shadow: 0 0 50px var(--main-color);
+    box-shadow: 0 0 40px var(--main-color);
 }
 .testimonial-item h2{
     font-size: 2.8rem;
@@ -466,27 +469,24 @@ font-size: small;
 .testimonial-item p{
     font-size: 1.3rem;
 }
-#star{
-    color: gold;
-    font-size: 2rem;
-}
+ 
 .progress-container {
     width: 80%;
     background-color: rgba(86, 86, 86, 0.966);
     border-radius: 25px;
-    box-shadow: inset 0 0 5px #000000;
-    margin: 20px 0;
-    height: 20px;
+    box-shadow: inset 0 0 1px #4caf50;
+    margin: 5px 0;
+    height: 15px;
     position: relative;
   }
   .progress-bar {
     height: 100%;
     width: 0%;
-    background-color: #4caf50;
+    background-color: var(--main-color);
     border-radius: 25px;
     text-align: center;
-    line-height: 20px; /* Align text in the center vertically */
-    color: white;
+    line-height: 15px; /* Align text in the center vertically */
+    color: var(--bg-color);
     font-weight: bold;
     transition: width 1s ease-in-out;
     animation: fillProgress 1s forwards;
@@ -526,18 +526,6 @@ font-size: small;
 .contact form .btn{
     margin-top: 2rem;
 }
-.myLocation h3{
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  #map {
-    height: 500px;  /* Increased height for better visibility */
-    width: 80%;    /* Width is 80% of the web page */
-    margin: 20px auto;  /* Center the map with auto margins */
-    border: 2px solid #333; /* Add a border for better definition */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-  }
 .footer{
     position: relative;
     border-top-color: 0;

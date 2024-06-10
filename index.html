@@ -20,7 +20,7 @@
                 <a href="#home" class="active">Home</a>
                 <a href="#education">Education</a>
                 <a href="#services">Services</a>
-                <a href="#testimonials">Testimonials</a>
+                <a href="#testimonials">Skills</a>
                 <a href="#contact">Contact</a>
             </nav>
        
@@ -44,7 +44,7 @@
                 <a href="#"><i class='bx bxl-twitter'></i></a>
             </div>
             <div class="btn-group">
-                <a href="#" class="btn">Hire</a>
+                <a href="document/my_cv (2).pdf" class="btn">My Cv</a>
                 <a href="#contact" class="btn">Contact</a>
             </div>
         </div>
@@ -188,7 +188,7 @@
                     <img src="images/design-tools-concept-illustration_114360-1227.jpg" alt="">
                     <h2>Adobe Photoshop & Illustrator</h2>
                     <div class="progress-container">
-                        <div class="progress-bar" id="progress-bar3">0%</div>
+                        <div class="progress-bar" id="progress-bar4">0%</div>
                       </div>
                     <p>Advanced graphic design skills, enabling the creation of high-quality visual content for various purposes.
                     </p>
@@ -197,7 +197,7 @@
                     <img src="images/mobile-ux-concept-illustration_114360-4276.jpg" alt="">
                     <h2>Android App Development</h2>
                     <div class="progress-container">
-                        <div class="progress-bar" id="progress-bar3">0%</div>
+                        <div class="progress-bar" id="progress-bar5">0%</div>
                       </div>
                     <p>Skilled in creating user-friendly Android apps, from concept to deployment, ensuring a smooth user experience.</p>
                 </div>
@@ -205,9 +205,10 @@
                     <img src="images/flat-international-mother-language-day-illustration_23-2149219243.jpg" alt="">
                     <h2>Languages</h2>
                     <div class="progress-container">
-                        <div class="progress-bar" id="progress-bar3">0%</div>
+                        <div class="progress-bar" id="progress-bar6">0%</div>
                       </div>
                     <p>Fluent in Amharic and English, with excellent proficiency in reading, speaking, writing, and listening in both languages.</p>
+                    
                 </div>
 
             </div>
@@ -221,18 +222,18 @@
         <form action="">
             <div class="input-group">
                 <div class="input-box">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="Full Name" id="name">
+                    <input type="email" placeholder="Email" id="email">
                 </div>
                 <div class="input-box">
-                    <input type="number" placeholder="Phome Number">
-                    <input type="text" placeholder="Subject">
+                    <input type="number" placeholder="Phome Number" id="number">
+                    <input type="text" placeholder="Subject" id="subject">
                 </div>
             </div>
 
             <div class="input-group-2">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-                <input type="submit" value="Send Message" class="btn">
+                <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" id></textarea>
+                <input type="submit" onclick="sendMail()" value="Send Message" class="btn">
             </div>
         </form>
     </section>
@@ -256,7 +257,7 @@
                 <a href="#contact">Contact</a>
             </li>
             <li>
-                <a href="#testimonials">Testimonials</a>
+                <a href="#testimonials">Skills</a>
             </li>
         </ul>
         <p class="copyright">
@@ -264,6 +265,16 @@
         </p>
     </footer>
 
-    <script src="script.js"></script>
+<
+        <script type="text/javascript">
+        (function(){
+            emailjs.init({script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+                publicKey: "x7hfWhHehuFL-Uhtl",
+            });
+        })();
+        </script>
+        <script src="script.js"></script>
 </body>
 </html>
