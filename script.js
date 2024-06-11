@@ -53,7 +53,41 @@ function updateProgressBar(id, percentage) {
       number : document.getElementById("Phone_no").value,
       
     }
-      emailjs.send("service_dv7ala3", "template_a0gw3z8", params).then(function (res){
+    
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+  
+      // Check if form is valid
+      if (this.checkValidity()) {
+        // Debugging log
+        console.log('Form is valid');
+  
+        // Extract form data
+        const formData = new FormData(this);
+        console.log('Form Data:');
+        formData.forEach((value, key) => console.log(key, value));
+  
+        // Send form data using EmailJS
+        emailjs.send('service_dv7ala3', 'template_a0gw3z8', params)
+          .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Message sent successfully!');
+            // Reset form after successful submission
+            document.getElementById('contact-form').reset();
+          }, function(error) {
+            console.log('FAILED...', error);
+            alert('Failed to send message: ' + JSON.stringify(error));
+          });
+      } else {
+        // Debugging log
+        console.log('Form is invalid');
+        alert('Please fill in all required fields.');
+      }
+    });
+  
+     /*emailjs.send("service_dv7ala3", "template_a0gw3z8", params).then(function (res){
         alert("Message Sent Successfully! " + res.status);
-      })
+      })*/ 
   }
+
+ 
