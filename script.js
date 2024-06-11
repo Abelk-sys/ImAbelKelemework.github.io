@@ -54,6 +54,6 @@ function updateProgressBar(id, percentage) {
       
     }
       emailjs.send("service_dv7ala3", "template_a0gw3z8", params).then(function (res){
-        alert("Success! " + res.status);
+        alert("Message Sent Successfully! " + res.status);
       })
   }

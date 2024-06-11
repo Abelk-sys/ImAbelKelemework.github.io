@@ -411,7 +411,7 @@ font-size: small;
 .service-info p{
     font-size: 1.6rem;
     font-weight: 600;
-    max-height: 100px;
+    max-height: 90px;
    /*text-align: justify;*/ 
     line-height: 1.7;
     margin: auto;
