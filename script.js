@@ -42,14 +42,18 @@ function updateProgressBar(id, percentage) {
     
   }, 1000);
 
+   
+
   function sendMail(){
-    let parms = {
-        name : document.getElementById("name").value,
-        email : document.getElementById("email").value,
-        number : document.getElementById("number").value,
-        subject : document.getElementById("subject").value,
-        message : document.getElementById("message").value,
+    var params = {
+      name : document.getElementById("fullName").value,
+      email : document.getElementById("email_id").value,
+      subject : document.getElementById("subject_for").value,
+      message : document.getElementById("message").value,
+      number : document.getElementById("Phone_no").value,
+      
     }
-    emailjs.send("service_dv7ala3","template_a0gw3z8",parms).then(alert("Email Sent !!!"))
+      emailjs.send("service_dv7ala3", "template_a0gw3z8", params).then(function (res){
+        alert("Success! " + res.status);
+      })
   }
- 
