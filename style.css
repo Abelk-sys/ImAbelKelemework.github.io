@@ -547,7 +547,7 @@ font-size: small;
     background: var(--main-color);
     color: var(--bg-color);
     border-radius: 2rem;
-    transition: background 0.3s ease;
+    transition: 0.3s ease ease-in-out;
 }
 
 .portfolio-info .btn:hover {
