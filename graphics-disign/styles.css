@@ -1,0 +1,189 @@
+/* Define root variables for color stylings */
+:root {
+    --primary-color: #333;
+    --secondary-color: #fff;
+    --accent-color: #f4f4f4;
+    --text-color: #333;
+    --text-light-color: #666;
+    --border-color: #ddd;
+    --hover-transform: scale(1.05);
+    --transition-duration: 0.3s;
+}
+
+/* Reset some basic elements for consistency across browsers */
+body, h1, h2, h3, h4, p, div, section, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header and navigation */
+header {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-height: 50px; /* Adjust as needed */
+    margin-right: 20px; /* Spacing between logo and navigation */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align to the right */
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    height: 3px;
+    width: 25px;
+    background: var(--secondary-color);
+    margin-bottom: 4px;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+}
+
+/* Main content area */
+main {
+    padding: 20px;
+    background: var(--accent-color);
+}
+
+/* Graphic Design Section Styling */
+.graphic-design {
+    padding: 50px 0;
+    background: var(--border-color);
+    text-align: center;
+}
+#graphic-design2 {
+    background: var(--accent-color);
+}
+
+.graphic-design .heading {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.graphic-design-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.graphic-design-item {
+    background: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-duration);
+    width: 100%;
+    max-width: 45%;
+    margin: 10px 0;
+    border-radius: 2%;
+}
+
+.graphic-design-item:hover {
+    transform: var(--hover-transform);
+}
+
+.graphic-design-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 0 2%;
+}
+
+.graphic-design-info {
+    padding: 15px;
+}
+
+.graphic-design-info h4 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: var(--text-color);
+}
+
+.graphic-design-info p {
+    font-size: 1em;
+    color: var(--text-light-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .graphic-design-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .graphic-design-item {
+        width: 80%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .graphic-design-container {
+        padding: 0 10px;
+    }
+
+    .graphic-design-info h4 {
+        font-size: 1.2em;
+    }
+
+    .graphic-design-info p {
+        font-size: 0.9em;
+    }
+}
